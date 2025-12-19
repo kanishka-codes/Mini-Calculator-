@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mini Calculator</title>
+    </head>
+    <body>
+        <h2>Mini Calculator</h2>
+        Number 1:<input type="number" id="num1"><br><br>
+        Number 2:<input type="number" id="num2"><br><br>
+        <button onclick="add()">Add</button>
+        <button onclick="sub()">Subtract</button>
+        <button onclick="mul()">Multiplication</button>
+        <button onclick="div()">Division</button>
+        <button onclick="cle()">Clear</button>
+        <p id="res"></p>
+        <script>
+            function add()
+            {
+                let a=Number(document.getElementById("num1").value);
+                let b=Number(document.getElementById("num2").value);
+                document.getElementById("res").innerHTML="Result="+(a+b);
+            }
+            function sub()
+            {
+                let a=Number(document.getElementById("num1").value);
+                let b=Number(document.getElementById("num2").value);
+                document.getElementById("res").innerHTML="Result="+ (a-b);
+            }
+            function mul()
+            {
+                let a=Number(document.getElementById("num1").value);
+                let b=Number(document.getElementById("num2").value);
+                document.getElementById("res").innerHTML="Result="+(a*b);
+            }
+            function div()
+            {
+                let a=Number(document.getElementById("num1").value);
+                let b=Number(document.getElementById("num2").value);
+                document.getElementById("res").innerHTML="Result="+(a/b);
+            }
+            function cle()
+            {
+                document.getElementById("num1").value="";
+                document.getElementById("num2").value="";
+                document.getElementById("res").innerHTML="";
+
+            }
+        </script>   
+
+    </body>    
+</html>    
